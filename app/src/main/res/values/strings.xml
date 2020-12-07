@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyFundamentalsApp</string>
+    <string name="app_name">Android Developer Fundamentals</string>
     <string name="orangeTextView">This is an orange TextView</string>
     <string name="greenTextView">This is a green TextView</string>
     <string name="blueTextView">This is a blue TextView</string>
@@ -11,4 +11,14 @@
     <string name="switchBackup">Auto backup</string>
     <string name="yes">YES</string>
     <string name="no">NO</string>
+
+    <string name="login">LOGIN</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="terms_conditions">I accept T&amp;C</string>
+    <string name="submit">Submit</string>
+    <string name="afisSecondChallenge">Email : %1$s.\nPhone : %2$s.\nCheckbox : %3$b</string>
+    <string name="notifSecondChallenge">You didn\'t fill all fields.</string>
+    <string name="invalidEmail">The email address you\'ve entered is not valid.</string>
+    <string name="invalidPhone">A phone number has only 10 characters.</string>
 </resources>
