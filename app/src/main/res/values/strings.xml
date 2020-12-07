@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyFundamentalsApp</string>
+    <string name="orangeTextView">This is an orange TextView</string>
+    <string name="greenTextView">This is a green TextView</string>
+    <string name="blueTextView">This is a blue TextView</string>
+    <string name="button">This is a button</string>
+    <string name="greenButton">This is a green button</string>
+    <string name="editText">This is an EditText</string>
+    <string name="newEditText">This is a new EditText</string>
+    <string name="notify">Notify me :)</string>
+    <string name="switchBackup">Auto backup</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+</resources>
