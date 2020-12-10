@@ -11,4 +11,5 @@
     <string name="switchBackup">Auto backup</string>
     <string name="yes">YES</string>
     <string name="no">NO</string>
+    <string name="spinner_example">Spinner Example</string>
 </resources>
