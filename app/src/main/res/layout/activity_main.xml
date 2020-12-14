@@ -1,157 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="5"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/header_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/header_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guide_center_horizontal"
+        android:scaleType="centerCrop"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
         android:orientation="horizontal"
-        android:weightSum="3">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/holo_orange_dark"
-            android:gravity="center"
-            android:text="@string/orangeTextView"
-            android:textColor="@color/white"
-            android:textSize="17sp" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/veryLightGreen"
-            android:gravity="center"
-            android:text="@string/greenTextView"
-            android:textSize="17sp" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/veryLightBlue"
-            android:gravity="center"
-            android:text="@string/blueTextView"
-            android:textColor="@color/white"
-            android:textSize="17sp" />
-    </LinearLayout>
-
-    <LinearLayout
+        app:layout_constraintGuide_percent="0.5"/>
+    <ImageView
+        android:id="@+id/poster_sparkling"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/poster_sparkling"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guide02"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide02"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="8dp"
-        android:weightSum="3">
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/lightBlue"
-            android:text="@string/button" />
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:scaleType="centerInside"
-            android:src="@drawable/paleta" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/lightGreen"
-            android:text="@string/greenButton" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65"/>
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@color/orangeYellow"
-        android:orientation="vertical"
-        android:weightSum="2">
+        app:layout_constraintTop_toBottomOf="@id/header_image"
+        app:layout_constraintStart_toEndOf="@id/poster_sparkling"
+        android:text="@string/greeting"/>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:hint="@string/editText" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:hint="@string/editText" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:background="@color/lightBlue"
-        android:orientation="vertical">
+        app:layout_constraintTop_toBottomOf="@id/text1"
+        app:layout_constraintStart_toEndOf="@id/poster_sparkling"
+        android:text="@string/sender"/>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/poster_sparkling"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/song"/>
+    <Button
+        android:id="@+id/let_it_snow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/gingles_bells"
+        android:text="@string/let_it_snow"
+        android:background="@color/pink"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        />
+    <Button
+        android:id="@+id/gingles_bells"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/let_it_snow"
+        android:text="@string/gingles_bells"
+        android:background="@color/pink"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"/>
 
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:text="@string/notify" />
-
-            <Switch
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_gravity="end"
-                android:text="@string/switchBackup"
-                tools:ignore="UseSwitchCompatOrMaterialXml" />
-        </RelativeLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/black"/>
-        <RatingBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:isIndicator="false"
-            android:numStars="5"
-            android:rating="4.0"
-            android:stepSize="1"
-            />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/black"/>
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/yes" />
-
-            <RadioButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/no" />
-        </RadioGroup>
-    </LinearLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

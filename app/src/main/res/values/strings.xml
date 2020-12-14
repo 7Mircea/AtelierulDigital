@@ -11,4 +11,9 @@
     <string name="switchBackup">Auto backup</string>
     <string name="yes">YES</string>
     <string name="no">NO</string>
+    <string name="greeting">Happy Holidays!</string>
+    <string name="sender">From Magda</string>
+    <string name="song">Have yourself a merry little Christmas\nLet your heart be light\nFrom now on, our troubles will be out of sight</string>
+    <string name="let_it_snow">Let It Snow</string>
+    <string name="gingles_bells">Gingles Bells</string>
 </resources>
