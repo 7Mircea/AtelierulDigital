@@ -11,4 +11,10 @@
     <string name="switchBackup">Auto backup</string>
     <string name="yes">YES</string>
     <string name="no">NO</string>
+    <string name="buton_unu">Primul principiu</string>
+    <string name="buton_doi">Al doilea principiu</string>
+    <string name="buton_trei">Al treilea principiu</string>
+    <string name="freedom">Freedom is a fundamental right.\n</string>
+    <string name="history">Those how don\'t know or refuse to learn history are condemned to repeat it.\n</string>
+    <string name="constitution">Constitution is the fundamental law of a country.\n</string>
 </resources>
