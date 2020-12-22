@@ -8,14 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class Activity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_2);
 
         TextView textView1 = findViewById(R.id.text1);
         TextView textView2 = findViewById(R.id.text2);
@@ -26,15 +25,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String str = editText.getText().toString();
-                Intent intent = new Intent(MainActivity.this, Activity2.class);
-                intent.putExtra("message1",str);
+                Intent intent = new Intent(Activity2.this, MainActivity.class);
+                intent.putExtra("message2",str);
                 startActivity(intent);
             }
         });
         Intent intent = getIntent();
         Bundle extra = intent.getExtras();
         if (extra != null) {
-            String message = extra.getString("message2");
+            String message = extra.getString("message1");
             textView1.setText(R.string.received);
             textView2.setText(message);
         }
