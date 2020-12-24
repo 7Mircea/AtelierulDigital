@@ -4,17 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:weightSum="5"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_view_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp" />
+
+    <Button
+        android:id="@+id/button_send_to_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:text="@string/send_to_fragment" />
 
     <FrameLayout
         android:id="@+id/main_fragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <fragment
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:name="com.example.myfundamentalsapp.MainFragment"/>
-    </FrameLayout>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

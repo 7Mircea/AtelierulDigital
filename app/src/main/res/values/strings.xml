@@ -11,4 +11,7 @@
     <string name="switchBackup">Auto backup</string>
     <string name="yes">YES</string>
     <string name="no">NO</string>
+    <string name="send_to_fragment">Send to Fragment</string>
+    <string name="send_to_activity">Send to Activity</string>
+    <string name="check_fragment">Check incoming messages Bundle</string>
 </resources>
