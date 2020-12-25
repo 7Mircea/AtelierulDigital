@@ -1,6 +1,8 @@
 package com.example.myfundamentalsapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendBundle(mainFragment);
+                sendMessageUsingMethod(mainFragment);
             }
         });
 
@@ -29,9 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void sendBundle(MainFragment mainFragment) {
-        Bundle bundle = new Bundle();
-        bundle.putString("cheie","Am trimis un Bundle");
-        mainFragment.setArguments(bundle);
+    private void sendMessageUsingMethod(MainFragment mainFragment) {
+        MainFragment fragment = (MainFragment) getSupportFragmentManager().findFragmentByTag("tag");
+        fragment.setTextView("Fragmentul a primit un mesaj din activitate printr-o metoda");
     }
 }

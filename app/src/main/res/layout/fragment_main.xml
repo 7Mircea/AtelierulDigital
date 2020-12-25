@@ -15,25 +15,5 @@
         android:text=""
         android:layout_margin="16dp"/>
 
-    <Button
-        android:id="@+id/button_send_to_activity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/text_view_fragment"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/send_to_activity"
-        android:layout_margin="8dp"/>
-
-    <Button
-        android:id="@+id/button_check_fragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/button_send_to_activity"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/check_fragment"
-        android:layout_margin="8dp"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
