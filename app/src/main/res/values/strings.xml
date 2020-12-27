@@ -14,4 +14,6 @@
     <string name="send_to_fragment">Send to Fragment</string>
     <string name="send_to_activity">Send to Activity</string>
     <string name="check_fragment">Check incoming messages Bundle</string>
+    <string name="enter_number">Enter Number</string>
+    <string name="send_to_fragment2">Send to second fragment</string>
 </resources>
