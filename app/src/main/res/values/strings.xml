@@ -16,4 +16,10 @@
     <string name="check_fragment">Check incoming messages Bundle</string>
     <string name="enter_number">Enter Number</string>
     <string name="send_to_fragment2">Send to second fragment</string>
+    <string name="message">Message</string>
+    <string name="chat">Chat</string>
+    <string name="profile">Profile</string>
+    <string name="share">Share</string>
+    <string name="send">Send</string>
+    <string name="communicate">Communicate</string>
 </resources>
