@@ -22,4 +22,8 @@
     <string name="share">Share</string>
     <string name="send">Send</string>
     <string name="communicate">Communicate</string>
+    <string name="name">Name</string>
+    <string name="email">email@email.com</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
 </resources>
