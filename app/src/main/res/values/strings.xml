@@ -26,4 +26,7 @@
     <string name="email">email@email.com</string>
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="message_fragment">This is a message fragment</string>
+    <string name="chat_fragment">This is a chat fragment</string>
+    <string name="profile_fragment">This is a profile fragment</string>
 </resources>
