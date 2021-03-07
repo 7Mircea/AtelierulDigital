@@ -8,12 +8,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
-    List<String> movieList;
-    MovieAdapter(List<String> movieList) {this.movieList = movieList;}
+    List<Movie> movieList = new LinkedList<>();
 
     @NonNull
     @Override
@@ -25,12 +25,24 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.getName().setText(movieList.get(position));
+        holder.getName().setText(movieList.get(position).getOriginalTitle());
     }
 
     @Override
     public int getItemCount() {
         return movieList.size();
+    }
+
+    public void setData(List<Movie> movieList) {
+        //stergem continutul listei anterioare
+        //si adaugam copiem lista primita
+        //daca nu am copia contitul ci doar adresa, cineva din exterior ar putea modifica
+        // ce afisam fara a folosi functia setData() ci folosind doar referinta listei
+        this.movieList.clear();
+        this.movieList.addAll(movieList);
+
+        notifyDataSetChanged();//anuntam recycler view ca setul de date care trebuie afisat
+        // a fost modificat
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
