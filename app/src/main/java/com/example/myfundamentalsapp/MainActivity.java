@@ -5,8 +5,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -17,11 +20,10 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MainActivity extends AppCompatActivity implements MovieListener{
-
-    private static Retrofit retrofit;
-    private List<Movie> movieListTemp;
-    private MovieAdapter adapter;
+public class MainActivity extends AppCompatActivity {
+    private Button topRatedMoviesButton;
+    private Button upComingMoviesButton;
+    private Button nowPlayingMoviesButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,21 +33,36 @@ public class MainActivity extends AppCompatActivity implements MovieListener{
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //recycler view part
-        RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        LinearLayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(manager);
-        adapter = new MovieAdapter();
-        recyclerView.setAdapter(adapter);
+        topRatedMoviesButton = findViewById(R.id.top_rated_movies_button);
+        upComingMoviesButton = findViewById(R.id.up_coming_movies_button);
+        nowPlayingMoviesButton = findViewById(R.id.now_playing_movies_button);
 
-        //data source part.
-        //am lasat-o ultima deoarece este considerata partea cea mai lenta
-        DataSource dataSource = new DataSource();
-        dataSource.getMovie(this);
+        topRatedMoviesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,TopRatedMoviesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        upComingMoviesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,UpComingMoviesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        nowPlayingMoviesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,NowPlayingMoviesActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
-    @Override
-    public void onMovieFetchedFromServer(List<Movie> movieList) {
-        adapter.setData(movieList);
-    }
+    
+
 }

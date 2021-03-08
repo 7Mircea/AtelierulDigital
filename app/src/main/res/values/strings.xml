@@ -12,4 +12,6 @@
     <string name="yes">YES</string>
     <string name="no">NO</string>
     <string name="top_rated_movie">Top Rated Movies</string>
+    <string name="up_coming_movies">Up Coming Movies</string>
+    <string name="now_playing_movies">Now Playing Movies</string>
 </resources>
